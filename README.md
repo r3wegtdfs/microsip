@@ -29,6 +29,10 @@ This is not a byte-for-byte copy. Four deliberate changes:
 
 The site content, branding, screenshots, and logo belong to the MicroSIP project.
 The MicroSIP *software* is GNU GPL v2, but that license covers the program, not the
-website's text and images. This copy is fine as local reference or for studying the
-markup; it should not be republished or served publicly, since a copy of a real
-project's site presented as the real thing is indistinguishable from impersonation.
+website's text and images. This repository is an unaffiliated archival copy, not a
+MicroSIP project release.
+
+Do not enable GitHub Pages on this repository. Serving these files live would put a
+working, visually identical copy of microsip.org at a public URL, which is
+indistinguishable from an impersonation of the real site regardless of intent. As a
+browsable file archive this is just a mirror; as a hosted site it is not.
