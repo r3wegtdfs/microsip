@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MicroSIP Troubleshooting</title>
+<meta name="description"
+	content="MicroSIP is a lightweight and reliable SIP softphone for Windows. Connect to any SIP provider or PBX system and make high-quality voice and video calls for office, remote, and business communication.">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicons/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="../favicons/favicon-48x48.png">
+<link rel="icon" type="image/png" sizes="64x64" href="../favicons/favicon-64x64.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="256x256" href="../favicons/favicon-256x256.png">
+<link rel="icon" type="image/png" sizes="512x512" href="../favicons/favicon-512x512.png">
+<link rel="icon" type="image/x-icon" href="../favicon.ico">
+<link rel="apple-touch-icon" sizes="120x120" href="../favicons/favicon-120x120.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../favicons/favicon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../favicons/favicon-192x192.png">
+<link rel="manifest" href="../favicons/site.webmanifest">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" type="text/css" href="../css/main.8.css">
+<script type="text/javascript" src="../js/main.3.js"></script>
+
+
+</head>
+<body>
+
+<table style="padding: 0px; margin: 0px 0px 10px 0px; width: 100%"
+	cellpadding="0" cellspacing="0">
+
+	<tr style="height: 85px;">
+
+		<td id="logoTD"><a href="../index.html"> <img src="../images/logo.png" alt="Logo">
+			</a></td>
+
+		<td style="padding-left: 0.5em">
+			<div id="pname">
+				<a href="../index.html" translate="no" class="notranslate">microsip</a>
+			</div>
+
+			<div id="psum">
+				<a href="../index.html">Lightweight and reliable SIP softphone for Windows</a>
+			</div>
+		</td>
+		<td id="searchTD">
+									
+						<div class="gcse-search"></div>
+										<!-- Google Translation  -->
+					<div id="google_translate_element"></div>
+					
+					
+					<!-- Google Translation  -->
+					</td>
+	</tr>
+</table>
+<ul id="menu">
+	<li><a href="../index.html">MicroSIP Home</a></li><li><a href="../downloads/index.html">Downloads</a></li><li><a href="../addons/index.html">Add-ons</a></li><li><a href="../help/index.html">Documentation</a></li><li><a href="../faq/index.html">FAQ</a></li><li><a href="index.html" id="menuActive">Troubleshooting</a></li><li><a href="../contact/index.html">Contact</a></li><li><a href="../custom/index.html">Custom Build</a></li></ul>
+<div style="padding-bottom: 110px;"><table width="100%">
+	<tr valign="top">
+		<td id="leftTD">
+			<div style="display:inline-block;width:180px;height:600px;">
+
+
+</div>
+			<div class="a">Platforms</div>
+			<ul>
+				<li>
+					<p>Windows:</p>
+					<p><img src="../images/win7.png" alt="Compatible with Windows 7 and later">
+				</li>
+				<li>
+					<p>
+						Linux, macOS, BSD<br /> <a href="https://www.winehq.org/"
+							target="_blank">https://www.winehq.org/</a>
+					</p>
+					<p>
+						Android, iPhone, iPad<br /><span style="color:#999">Not supported</span>
+					</p>
+				</li>
+			</ul>
+
+			<div class="a">Get Involved</div>
+			<ul>
+				<li><a href="../support/index.html">Support Development</a></li>
+									<li><a href="../translation/index.html">Translate</a></li>
+					<li><a href="../wishes/index.html">Wishes</a></li>
+							</ul>
+
+			<div class="a">Project</div>
+			<ul>
+				<li><a href="../source/index.html">Source Code</a></li>
+				<li><a
+						href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.html">License<br>GNU GPL v2</a></li>
+			</ul>
+
+			<div class="a">Legal (Website)</div>
+			<ul>
+								<li><a href="../privacy-policy/index.html">Privacy Policy</a></li>
+				<li><a href="../legal-notice/index.html">Legal Notice</a></li>
+			</ul>
+
+
+		</td>
+		<td id="rightTD">
+							<div style="float: right; margin: 10px;">
+					
+
+				</div>
+			<h1>MicroSIP Troubleshooting</h1><div class="LH">
+
+<h2>Registration</h2>
+
+<p><b>1. Can't get online status and green icon in status bar.</b></p>
+
+Registration is required to receive incoming calls. To do this, you must specify the SIP server. If you leave the SIP server empty, you can make calls but not be able to receive.
+Username, login, password and domain are also used in registration.
+After successful registration, you will see a green icon and the status "Online" in status bar.
+
+<p><b>Error: "Service unavailable", "Bad gateway", "Request Timeout".</b></p>
+<p>
+<ul>
+<li>Make sure you have entered valid "SIP server", optional  "SIP proxy". Your SIP provider should provide you with this information.</li>
+<li>It is also possible that your SIP operator must add your IP address to the server's whitelist.</li>
+<li>Try changing the transport: UDP, TCP or TLS.</li>
+<li> You can also try spoofing the "User-Agent" string in the microsip.ini file.</li>
+</ul>
+</p>
+<p><b>Error: "Forbidden", "Incorrect password" or similar.</b></p>
+<p>Check your SIP server, domain, username, password. The proxy and login are often empty, but you must specify them if required by your SIP provider. Some SIP providers require that you enable the STUN server if your PC does not have a public IP address.
+<p>Other possible reasons:</p>
+<ul>
+<li>Server connection limit reached.<p>You may have reached the limit of simultaneous connections to the server. This could also happen as a result of your network card renewing its IP address multiple times. In this case, you need to stop trying to connect and wait for some time to close the broken connections. You can disable "Handle IP changes" in the settings to avoid this problem.</p>
+</li>
+<li>User-agent is blocked.<p>Your SIP provider may block the softphone by the user-agent line. In this case, you can redefine the user-agent line to an allowed one (manually in the microsip.ini file)</p>
+</li>
+<li>IP address is blacklisted.<p>Your provider can also use a blacklist or whitelist of IP addresses to restrict connections. In this case, you can use a VPN or try a different internet connection.</p>
+</li>
+<li>Temporary malfunction on the PBX side.<p>If you suddenly encounter this problem, there may be a technical problem on your PBX side. Try again later or contact your PBX administrator.</p>
+</li>
+</ul>
+
+</p>
+<p><b>"Internal server error" or similar error. "SIP proxy" is not empty.</b></p>
+<p>Try to add ";hide" suffix to SIP proxy, example "sipproxy.host.com;hide". This can help when SIP service configured not the best way.</p>
+
+<h2>Calls</h2>
+
+<p><b>1. Can't make a call</b></p>
+
+When trying to make a call a message is showed:
+
+<p><b>Error: "Unable to open sound device: Undefined external error. Error #450001" (after Windows 10 update 1803).</b></p>
+<p>Fix microphone permission in the Windows settings (Windows Settings => Privacy => Microphone).</p>
+<p><b>Error: "Unable to find default audio device".</b></p>
+<p>Speakers and microphone both are required. To make calls you must have input and output sound device in your system. Same for RDP connections.</p>
+<p><b>Error: "An invalid Parameter was passed to a system function".</b></p>
+<p>Allow access to the microphone in Kaspersky Anti-virus settings.</p>
+<p><b>Error: "Not acceptable here".</b></p>
+<p>This is a response from your PBX. Your PBX may not support the requested audio/video codec, encryption, or other requested feature that you have enabled in microsip. Refer to the PBX logs for details. You also should test with a clean installation of microsip, where all additional features are disabled by default.</p>
+<p><b>Error: "End of file".</b></p>
+<p>Change Transport to UDP.</p>
+
+<p><b>2. Can't make or end a call</b></p>
+
+
+<p><b>Error: "Connection Timeout", "Request Timeout".</b></p>
+<ul>
+<li>Test with a clean installation of microsip, where all additional features are disabled by default (<a href="../help/index.html#remarkFragmentation">remark 1</a>).</li>
+<li>Make sure your SIP account configuration is correct. Check fields: username, password, domain, server, proxy.</li>
+<li>Make sure you dial the correct number and in the correct format, with the correct prefix, etc (often <b>not found</b> error).</li>
+<li>Disable SIP ALG in the router settings.</li>
+<li>Try with UDP, TCP, TLS transport, one by one.</li>
+<li>Try with/without "Allow IP rewrite". Try with/without STUN server.</li>
+<li>Try to set the source port in the microsip settings to 5060 (this is a local port, not a remote server port; the normal value is empty).</li>
+<li>Try calling from another computer, using a different router or other internet connection.</li>
+<li>Check your PBX configuration, NAT support.</li>
+</ul>
+
+<p><b>3. Missed incoming calls.</b></p>
+<p>This can happen if your router closes connection by inactivity timeout. To fix this problem you need to reduce the timeouts in your account settings.</p>
+<p>With one of these minimum values the problem is commonly solved: "Keep-Alive" = 9 or "Register Refresh" = 58.</p>
+<p>We do not recommend setting the "Register Refresh" value too low, as this will increase the load on your PBX.</p>
+<p>You should determine and set the value at which the problem disappears.</p>
+
+<p><b>4. No incoming calls, outgoing calls work.</b></p>
+<p>Make sure your status bar shows a green icon that says "Online". If so, the phone is registered in PBX and ready to receive incoming calls.</p>
+<p>Make sure your internet router does not create obstacles for incoming calls. You can temporarily try another internet connection (try mobile hotspot) or try to replace the router with another model.</p>
+<p>You can check incoming calls with another softphone, perhaps the problem is on the PBX side.</p>
+
+<p><b>5. No sound or one directional sound</b></p>
+5.1. Computer related problems.
+<p>If you don't even see the microphone level indicator jumping during a call, check your antivirus settings (in particular, Kaspersky): allow access to the microphone, or add MicroSIP to the exceptions list.</p>
+5.2. Configuration/network/PBX related issues.
+<p>This can happen if you use one or more routers (with NAT) on the way to the PBX, or if your computer has multiple network connections.</p>
+<p>You should configure your PBX to support NAT. For example, for Asterisk chan_sip you must add "nat = auto_force_rport,auto_comedia" to the sip.conf file, for Asterisk res_pjsip - "rtp_symmetric=yes", "rewrite_contact=yes", "force_rport=yes" to the pjsip.conf file.</p>
+<p>If you can't change PBX configuration, you can try to enable "Allow IP rewrite" feature, that will do that work on the softphone side and if possible disable "SIP ALG" in the router/routers settings. "SIP ALG" may interfere with the correct rewriting of IP.</p>
+<p>The following actions may help you too:</p>
+<ul>
+<li>Leave only one active network connection or manually select the local IP address (or enter your public IP address) in the account setup window.</li>
+<li>Test with a clean installation of MicroSIP, where all additional features are disabled by default (<a href="../help/index.html#remarkFragmentation">remark 1</a>).</li>
+<li>Try with/without STUN server.</li>
+<li>Try without/with "ICE".</li>
+<li>Try to set the source port in the microsip settings to 5060 (Note: This is a local port, not a remote server port; the normal default value is empty, meaning dynamic assignment).</li>
+<li>Try calling from another computer, using a different router or other internet connection.</li>
+</ul>
+
+<p><b>6. Calls getting dropped</b></p>
+<ul>
+<li>Codec mismatch. Try using the standard G.711 codec for both sides.</li>
+<li>Disable SIP ALG in the router settings.</li>
+<li>Try with UDP, TCP, TLS transport, one by one.</li>
+<li>Try with/without "Allow IP rewrite". Try with/without STUN server.</li>
+<li>Check your PBX configuration, NAT support.</li>
+<li>Try disabling Session Timers if your calls drop after XX sec/min (not recommended as a permanent solution).
+</ul>
+
+<p><b>7. Long initialization time when making calls</b></p>
+<p>If there is a big delay when you make a call, try to switch from TCP+UDP to UDP transport. Often SIP server does not support TCP.</p>
+
+<p><a name="crash"></a><b>8. Freezes or crashes</b></p>
+
+8.1. Computer related problems
+<ul>
+<li>Antivirus or other security software installed on your PC. Temporarily disable your antivirus or add the softphone to the exceptions list.</li>
+<li>Problem with sound card, graphics card, or camera drivers. Try using MicroSIP Lite to rule out issues with the video subsystem. Try using a different audio device (e.g. a USB or Bluetooth headset). After identifying the problematic device, try reinstalling its driver.</li>
+<li>Damage to software components of the operating system. Try running it on another PC.</li>
+</ul>
+
+<br>
+8.2. Problems with the application.
+<p>To avoid the problem and identify its cause, we recommend the following steps:</p>
+<ul>
+<li>Disable "Enable Log File" in your softphone settings.</li>
+<li>Disable "Handle IP changes" in your softphone settings.</li>
+<li>Unistall the app along with its settings and reinstall it. Don't forget to back up your data and settings.</li>
+<li>Start with the simplest configuration and gradually activate the features you need.</li>
+</ul>
+<p>If your PBX configuration or a specific softphone feature consistently reproduces an issue, and it is not related to the factors described above, please contact us. We are ready to investigate such cases.</p>
+<br>
+
+<h2>Video Calls</h2>
+<br>
+<p><b>Application crash or restart when making video calls.</b></p>
+<p>Update your video card driver. Make sure hardware acceleration is not broken.</p>
+<p><b>Green video window.</b></p>
+<p>This issue is similar to the "one directional sound" problem. The video stream does not reach the softphone from the server, most likely due to the wrong network route, NAT, or firewall.</p>
+
+<br>
+<h2>Other help pages</h2>
+<p>Look for other answers on these pages: <a href="../faq/index.html">Frequently asked questions</a> and <a href="../help/index.html">Documentation</a></p>
+<h2>Report bugs</h2>
+<p>Before contacting us for assistance, please review all the information provided above.</p>
+
+<p>Report bugs and compatibility issues <a href="https://www.microsip.org/contact/form?subject=bug">here</a></p>
+<p><b>PLEASE NOTE:</b> We cannot guarantee a response time or that every message will receive a reply. However, every message is reviewed and considered, even if you do not receive a response. We reply as our capacity allows.
+<br />
+</p>
+
+</div>
+<div style="margin-top: 40px;">
+
+
+</div>
+</td>
+</tr>
+</table>
+</div>
+    <div id="mc-adialog" class="mc-ab-root" style="display: none !important;">
+        <div class="mc-dialog-container">
+            <div class="mc-dialog-overlay"></div>
+            <div tabindex="0" id="mc-focus-trap-pre-div"></div>
+            <div class="mc-ab-dialog mc-dialog" role="dialog" tabindex="0" aria-label="Please allow ads on our site">
+                <div class="mc-dialog-content">
+                    <div class="mc-header">
+                        <div class="mc-header-image-container mc-header"><img class="mc-header-image" alt="Welcome to Microsip.org" id="mc-header-image"></div>
+                    </div>
+                    <div class="mc-dialog-headline">
+                        <h1 class="mc-dialog-headline-text">Please allow ads on our site</h1>
+                    </div>
+                    <div class="mc-dialog-body">
+                        <p class="mc-dialog-body-text">Looks like you're using an ad blocker. We rely on advertising to help fund our project.</p>
+                    </div>
+                </div>
+                <footer class="mc-dialog-footer">
+                    <div class="mc-buttons-section"><button role="button" aria-label="Allow ads" class="mc-button  mc-button mc-button-whitelist" tabindex="0" id="mc-adialog-button">
+                            <div class="mc-button-background"></div>
+                            <p class="mc-button-text">Allow ads</p>
+                        </button>
+                        <button role="button" aria-label="Allow ads" class="mc-button  mc-button mc-button-whitelist" tabindex="0" id="mc-adialog-button2">
+                            <div class="mc-button-background"></div>
+                            <p class="mc-button-text">Support the project</p>
+                        </button>
+                    </div>
+                    <div id="mc-skip"><a class="mc-subscription-link" href="#" onclick="return closeADialog()">Continue without ads</a></div>
+                </footer>
+            </div>
+            <div tabindex="0" id="mc-focus-trap-post-div"></div>
+        </div>
+    </div>
+    <div id="mc-adialog-info" class="mc-whitelist-root" style="display: none !important;">
+        <div class="mc-dialog-overlay"></div>
+        <div class="mc-whitelist-dialog-wrapper"><iframe class="mc-whitelist-dialog" frameborder="0" id="mc-whitelist-iframe" tabindex="0" style="width: 554px !important; height: 567px !important;"></iframe></div>
+    </div>
+    <script>
+        document
+            .getElementById('mc-adialog-button2')
+            .addEventListener('click', (e) => {
+                e.preventDefault();
+                location.href="https://www.microsip.org/support?adblocker=1";
+            });
+    </script>
+	</body>
+
+	</html>

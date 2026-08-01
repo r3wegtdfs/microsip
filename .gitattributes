@@ -1,0 +1,4 @@
+# This is a captured mirror — keep every file byte-identical to what was
+# fetched. Without this, Git's autocrlf would rewrite line endings in the
+# HTML/JS and the copy would no longer match the source.
+* -text
